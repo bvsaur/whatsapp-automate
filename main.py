@@ -48,4 +48,4 @@ def whatsapp_automation(path):
 
 
 if __name__ == "__main__":
-    whatsapp_automation("data/data.xlsx")
+    whatsapp_automation(os.path.join('data', 'data.xlsx'))
