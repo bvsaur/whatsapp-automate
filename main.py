@@ -17,7 +17,7 @@ def whatsapp_automation(path):
     # * Validate if the communication needs an image and validate it
     img_name = input(
         "Hola! Por favor tipea el nombre y extensión de la imagen (ejm: imagen.png)\nEn caso esta comunicación no tenga imagen no escribas nada y presiona ENTER.\n> ")
-    img_path = f"data/{img_name}"
+    img_path = os.path.join('data', img_name)
     if(img_name != "" and os.path.isfile(img_path) == False):
         print("\nLa imagen ingresada es errónea, por favor intenta de nuevo.")
         return
@@ -30,8 +30,8 @@ def whatsapp_automation(path):
         if idx == 0:
             continue
 
-        phone_no = f"+51{row[0].value}"
-        message = row[1].value
+        phone_no = f"+51{row[3].value}"
+        message = row[4].value
 
         if(img_name == ""):
             web.open(
